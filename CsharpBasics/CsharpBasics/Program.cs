@@ -30,14 +30,46 @@ namespace CsharpBasics //Mailing Address example Namespace (State) class (City) 
                 }
                 else
                 {
-                    int minutes = int.Parse(entry);
+                    try
+                    {
+                        int minutes = int.Parse(entry); 
+
+                    if (minutes <= 0)
+                    {
+                        Console.WriteLine("Come ON! Try to exercise.");
+                        continue;
+                    }
+                    else if (minutes <= 10)
+                    {
+                        Console.WriteLine("Better than nothing right?");
+                    }
+                    else if (minutes <= 30)
+                    {
+                        Console.WriteLine("Way to GO!");
+                    }
+                    else if (minutes <= 60)
+                    {
+                        Console.WriteLine("***Ninja Warrior***");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Show Off... "); 
+                    }
+
                     //Add to total 
                     runningTotal = runningTotal + minutes;
 
                     //Display to screen 
                     Console.WriteLine("You've exercised " + runningTotal + " minutes.");
+
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Not a vailid input");
+                    continue;
                 }
                }
+              }
 
             Console.WriteLine("Great Job!"); 
             
