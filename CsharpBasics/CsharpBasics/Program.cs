@@ -27,7 +27,7 @@ namespace CsharpBasics //Mailing Address example Namespace (State) class (City) 
 
             //Repeat until user ends 
 
-
+            Console.WriteLine("Some other information here.");
             //Keep console window open in debug mode
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
