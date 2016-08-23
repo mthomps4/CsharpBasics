@@ -14,11 +14,10 @@ namespace CsharpBasics //Mailing Address example Namespace (State) class (City) 
             //Use .net framework 
             //Terminal csc Program.cs creates Program.exe when not using VS 
 
-            int runningTotal = 0;
+            double runningTotal = 0;
 
             //Repeat until user ends        
-            bool keepGoing = true;
-            while (keepGoing) {
+            while (true) {
 
                 //Prompt user for minutes exercised 
                 Console.Write("Enter how many minutes you exercised or type \"quit\" to exit: ");
@@ -26,13 +25,12 @@ namespace CsharpBasics //Mailing Address example Namespace (State) class (City) 
 
                 if (entry == "quit")
                 {
-                    keepGoing = false;
+                    break;
                 }
-                else
-                {
+
                     try
                     {
-                        int minutes = int.Parse(entry); 
+                        double minutes = double.Parse(entry); 
 
                     if (minutes <= 0)
                     {
@@ -68,7 +66,7 @@ namespace CsharpBasics //Mailing Address example Namespace (State) class (City) 
                     Console.WriteLine("Not a vailid input");
                     continue;
                 }
-               }
+               
               }
 
             Console.WriteLine("Great Job!"); 
